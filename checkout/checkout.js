@@ -79,3 +79,16 @@ function populatePriceList() {
 }
 
 populatePriceList();
+
+function handleSubmit(event) {
+	event.preventDefault();
+
+	const form = event.target;
+	if (form.checkValidity()) {
+		const country = form.querySelector('#customerCountry').value;
+		window.location.href = '../paid/paid.html?country=' + country;
+	} else {
+		alert('Please fill in all required fields.');
+		form.reportValidity();
+	}
+}

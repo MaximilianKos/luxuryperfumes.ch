@@ -1,9 +1,17 @@
+const script = document.createElement('script');
+script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js';
+document.head.appendChild(script);
+
 document.addEventListener('DOMContentLoaded', function () {
 	populateCartDropdown();
 });
 
 function populateCartDropdown() {
 	const cartDropdown = document.getElementById('cartItemsDropdown');
+
+	if (!cartDropdown) {
+		return;
+	}
 
 	cartDropdown.innerHTML = '';
 
