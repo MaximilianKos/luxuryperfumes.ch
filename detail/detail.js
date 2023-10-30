@@ -1,16 +1,14 @@
-/* on load */
 document.addEventListener('DOMContentLoaded', function () {
 	const url = new URL(window.location.href);
-	/*If no parameters are found redirect to products*/
+
 	if (!url.searchParams.get('title')) {
-		console.log('No parameters found');
 		window.location.href = '../products/products.html';
 	}
 
-	const title = url.searchParams.get('title');
-	const description = url.searchParams.get('description');
-	const image = url.searchParams.get('image');
-	const price = url.searchParams.get('price');
+	const title = decodeURIComponent(url.searchParams.get('title'));
+	const description = decodeURIComponent(url.searchParams.get('description'));
+	const image = decodeURIComponent(url.searchParams.get('image'));
+	const price = decodeURIComponent(url.searchParams.get('price'));
 
 	const nameElement = document.getElementById('product-name');
 	const descriptionElement = document.getElementById('product-description');
