@@ -7,8 +7,14 @@ img:hover {
 }
 
 .fixed-alert {
-	position: fixed;
+	position: fixed !important;
 	bottom: 20px;
 	right: 20px;
 	z-index: 9999;
+}
+
+@media only screen and (max-width: 600px) {
+	.payment-methods {
+		width: 10vw !important;
+	}
 }
