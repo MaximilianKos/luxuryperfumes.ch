@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	});
 
-	const addToCartButtons = document.querySelectorAll('.btn-outline-secondary');
+	const addToCartButtons = document.querySelectorAll('.btn-outline-warning');
 
 	addToCartButtons.forEach((button) => {
 		button.addEventListener('click', function () {
